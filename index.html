@@ -1,44 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <link rel="stylesheet" href="./src/css/style.css">
+
 <body>
 
     <nav>
+        <div class="navbar">
+
             <div class="nav_logo">
                 <h3>JOSHUA</h3>
             </div>
-            <ul>
-                <li>Home</li>
-                <li>Goals</li>
-                <li>Contact</li>
+            <ul class="active">
+                <li><a href="#about">Home</a></li>
+                <li><a href="#goal">Goals</a></li>
+                <li><a href="#link">Links</a></li>
             </ul>
-    </nav>
+        </div>
 
-    <div class="about_section">
+
+    </nav>
+    <div class="data-container">
+        Today is:
+        <span data-testid="currentTimeUTC" class="day"></span>
+        <span data-testid="currentDay" class="time"></span>
+
+    </div>
+
+    <div class="about_section" id="about">
         <div>
-            <img src="" alt="" />
+            <img src="./src/images/mine.jpg" alt="" data-testid="slackProfilePicture" />
         </div>
         <div>
-            <h3>Aju Joshua Kalu</h3>
-            <div>Fullstack Developer</div>
+            <h4>Name: Aju Joshua Kalu</h4>
+            <h4 data-testid="slackDisplayName">Slack Username: Xphantom</h4>
+            <h4 data-testid="slackEmail">Email: ajujoshua2019@gmail.com</h4>
+
+
 
             <!-- description -->
         </div>
     </div>
-    <div class="goal_section">
-        <div class="one">
-            <img src="./src/images/ass.jpg" alt="" />
-        </div>
-        <div class="two">
+    <div class="goal_section" id="goal">
             <h3>My Goal In The Next Two Years</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ex assumenda distinctio qui sunt eum a, aliquid, cumque voluptate ipsa fugiat facilis! Officia necessitatibus consectetur expedita, error magni facilis at.</p>
-        </div>
+            <ul>
+                <li>Master a popular front-end framework like React, Angular, or Vue.js. This will enhance your ability to build complex and
+                interactive user interfaces.</li>
+                <li>Learn a new back-end framework or technology that complements your current skillset. Examples include Spring Boot
+                (Java), Django (Python), or Express.js (Node.js).s</li>
+                <li>Strengthen your ability to think holistically about full-stack development. This involves understanding how front-end
+                and back-end components interact and how decisions in one area impact the other.</li>
+                <li>Deepen your understanding of advanced debugging techniques. This could involve learning how to use debuggers
+                effectively, analyze stack traces, and leverage browser developer tools.</li>
+                <li>Cultivate a strong growth mindset and a commitment to continuous learning. This involves actively seeking out new
+                technologies, attending workshops or conferences, and engaging in personal projects to experiment with new tools and
+                frameworks.</li>
+            </ul>
+
     </div>
+    <div class="links" id="link">
+        <h3>Links</h3>
+        <a  data-testid="hngLink" href="hng.tech/learn.">HNG LEARN</a>
+        <a data-testid="keywordLink" href="http://keyword.dog/"> KEYWORDDOG</a>
+        <a data-testid="scrapeanywebLink" href="http://scrapeanyweb.site/">SCRAPE ANY WEBSITE</a>
+    </div>
+    <script src="./src/js/main.js"></script>
 
 </body>
+
 </html>
